@@ -75,7 +75,7 @@ The notebook includes comprehensive evaluation:
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/esosetrov/data_augmentation_for_CNN
+git clone https://github.com/esosetrov/data_augmentation_CNN
 cd data_augmentation_CNN
 
 # Install dependencies
