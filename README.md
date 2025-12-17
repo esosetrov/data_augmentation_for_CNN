@@ -26,11 +26,13 @@ data_augmentation_CNN/
 ## Technical Implementation
 
 ### 1. **Data Loading & Preprocessing**
+
 - Loads images from directory structure using `image_dataset_from_directory`
 - Converts images to `tf.float32` normalized range [0, 1]
 - Implements data caching and prefetching for optimal GPU utilization
 
 ### 2. **Augmentation Techniques**
+
 The notebook implements several augmentation methods:
 - `RandomContrast`: Adjusts image contrast by a specified factor
 - `RandomFlip`: Horizontal and vertical image flipping
@@ -38,6 +40,7 @@ The notebook implements several augmentation methods:
 - *Additional techniques are commented for experimentation*
 
 ### 3. **CNN Architectures**
+
 **Model 1: Standard CNN with Moderate Augmentation**
 - Augmentation: Contrast(0.1), Horizontal Flip, Rotation(0.1)
 - Convolutional blocks with 64, 128, 256 filters (kernel_size=3)
@@ -45,12 +48,14 @@ The notebook implements several augmentation methods:
 - Dense head: 8 neurons → 1 output (sigmoid)
 
 **Model 2: Alternative CNN with Strong Augmentation**
+
 - Augmentation: Contrast(0.5), Vertical Flip, Rotation(0.5)
 - Convolutional blocks with 64, 128, 256 filters (kernel_size=2)
 - Activation: SELU, Padding: 'valid'
 - Dense head: 6 neurons → 1 output (sigmoid)
 
 ### 4. **Training Configuration**
+
 - Optimizer: Adam with epsilon=0.01
 - Loss: Binary Crossentropy
 - Metric: Binary Accuracy
